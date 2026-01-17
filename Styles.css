@@ -1,0 +1,141 @@
+* {
+    margin: 0px;
+    padding: 0;
+    box-sizing:content-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(21, 21, 80);
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.header {
+    background-image: url(IMGS/FondoXD.avif);
+    background-size: cover;
+    min-height: 70vh;
+}
+
+.sega {
+    max-width: 1450px;
+    margin: auto;
+    height: 50px;
+}
+
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(21, 21, 80);
+    padding: 15px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+}
+
+.navbar a:hover {
+    color: aqua;
+}
+
+
+.header-content {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.btn-1 {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 30px;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+
+.juegos {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.project {
+    margin: 30px auto;
+    max-width: 500px;
+}
+
+
+.informacion {
+    padding: 60px 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    text-align: center;
+}
+
+
+.contacto {
+    padding: 60px 20px;
+    background-color: #111;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: aqua;
+    border: none;
+    cursor: pointer;
+}
+
+
+.footer {
+    padding: 30px;
+    text-align: center;
+    border-top: 1px solid white;
+}
+
+.links a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+}
