@@ -130,6 +130,9 @@ img {
 .contacto {
     padding: 60px 20px;
     background-color: rgb(14,21,119);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 form { max-width: 400px; margin: auto; }
@@ -140,6 +143,8 @@ input, textarea {
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    min-height: 50px;
+    resize: vertical;
 }
 
 button {
@@ -149,6 +154,7 @@ button {
     border: none;
     cursor: pointer;
     transition: 0.3s;
+    width: 100%;
 }
 
 button:hover { background-color: rgb(52,94,231); }
@@ -201,4 +207,8 @@ button:hover { background-color: rgb(52,94,231); }
 
     .informacion img { max-width: 80%; margin: 0 auto; }
     form { width: 90%; }
+    
+    .contacto form {
+        width: 100%;
+    }
 }
