@@ -1,3 +1,109 @@
+/* ================= Pantalla de Inicio ================= */
+body.inicio {
+    padding-top: 0;
+}
+
+.inicio-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.inicio-container h1 {
+    font-size: 2.5rem;
+}
+
+.opciones {
+    display: flex;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+/* ================= Gestor de Tareas ================= */
+body.tareas-body {
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.task-app {
+    background: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+.task-app h1 {
+    margin-bottom: 20px;
+}
+
+.task-input {
+    display: flex;
+    gap: 10px;
+}
+
+.task-input input {
+    flex: 1;
+    min-height: auto;
+}
+
+.task-input button {
+    width: auto;
+    padding: 10px 20px;
+}
+/* ================= Tareas en línea ================= */
+.tarea-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.tarea-izq {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+}
+
+.tarea-izq input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.tarea-texto {
+    flex: 1;
+    text-align: left;
+    word-break: break-word;
+}
+
+.tarea-botones {
+    display: flex;
+    gap: 10px;
+}
+
+.tarea-botones button {
+    width: auto;
+    padding: 6px 12px;
+    font-size: 0.9rem;
+}
+/* ================= Tarea Completada ================= */
+.completada .tarea-texto {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
 /* ================= Reset ================= */
 * {
     margin: 0;
@@ -211,4 +317,62 @@ button:hover { background-color: rgb(52,94,231); }
     .contacto form {
         width: 100%;
     }
+}
+/* ================= Gestor de tareas responsive ================= */
+@media (max-width: 600px) {
+
+    .task-app {
+        padding: 25px;
+    }
+
+    .task-input {
+        flex-direction: column;
+    }
+
+    .task-input button {
+        width: 100%;
+    }
+
+    .tarea-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .tarea-izq {
+        justify-content: flex-start;
+    }
+
+    .tarea-botones {
+        justify-content: flex-end;
+    }
+    .contador {
+    margin-bottom: 15px;
+    opacity: 0.8;
+    font-size: 0.95rem;
+}
+
+}
+/* ================= Botón Volver a Inicio ================= */
+.btn-volver {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(25, 11, 130, 0.8);
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 50%;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: 0.3s;
+    z-index: 1000;
+}
+
+.btn-volver:hover {
+    background-color: rgba(52, 94, 231, 0.9);
+    transform: scale(1.1);
 }
